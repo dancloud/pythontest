@@ -1,7 +1,7 @@
 pipeline {
-  agent any
+  agent { label 'kubeagent' }
   stages {
-    stage('Test') {
+    stage('Build') {
       agent any
       steps {
         sh 'python app.py'
